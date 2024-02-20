@@ -1,4 +1,4 @@
-{% extends "main/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% load goods_tags %}
 
@@ -75,15 +75,15 @@
                                 {% endautoescape %}
                             </p>
                         </a>
-                        <p class="card-text">
+                            <p class="card-text">
                             {% autoescape off %}
                                 {% if product.bodyline %}
-                                    {{ product.bodyline|truncatechars:100 }}
+                                    {{ product.bodyline|truncatechars:90 }}
                                 {% else %}
                                     {{ product.description|truncatechars:50 }}
                                 {% endif %}
                             {% endautoescape %}
-                        <p class="product_id">id: {{ product.display_id }}</p>
+                            <p class="product_id">id: {{ product.display_id }}</p>
                         <div class="d-flex justify-content-between">
                             {% if product.discount %}
                                 <p><s>{{ product.price }}</s> $</p>
